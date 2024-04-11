@@ -7,15 +7,37 @@
 
 import UIKit
 
-class RootViewController: UIViewController {
+class RootViewController: UIViewController,  UITableViewDataSource {
 
+    @IBOutlet var tableView: UITableView!
+    var model:Array<SuperHero> = []
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tableView.dataSource=self
         // Do any additional setup after loading the view.
     }
     
-
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            
+        let cell:SuperTableViewCell = tableView.dequeueReusableCell(withIdentifier: "standarCell", for:indexPath) as! SuperTableViewCell
+            
+        let fila = model[indexPath.row]
+            
+        cell.render(ima:fila.image.url,tit:fila.name)
+            
+        return cell
+    }
+        
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        model.count
+    }
+    
+    
+    
+    
     /*
     // MARK: - Navigation
 

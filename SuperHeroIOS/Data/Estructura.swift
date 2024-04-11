@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct SuperHeroResponse {
+struct SuperHeroResponse:Codable{
     let response: String
     let results: Array<SuperHero>
     let resultsFor: String
@@ -16,14 +16,14 @@ struct SuperHeroResponse {
 
 
 
-struct SuperHero {
+struct SuperHero:Codable{
     let id:String
     let name:String
     let biography: Biography
     let image:Image
 }
 
-struct Biography {
+struct Biography:Codable{
     let alignment: String
     let alterEgos: String
     let firstAppearance: String
@@ -32,6 +32,6 @@ struct Biography {
     let publisher: String
 }
 
-struct Image {
+struct Image:Codable{
     let url: String
 }
