@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Foundation
 
 class SuperTableViewCell: UITableViewCell {
 
@@ -13,7 +14,8 @@ class SuperTableViewCell: UITableViewCell {
     @IBOutlet weak var nombre: UILabel!
     
     func render (ima:String,tit:String){
-        superImagen.image=UIImage(contentsOfFile: ima)
+        superImagen.loadImage(fromURL: ima)
+        //superImagen.load(url: URL(string:ima)!)
         nombre.text=tit
     }
     
@@ -29,3 +31,4 @@ class SuperTableViewCell: UITableViewCell {
     }
 
 }
+

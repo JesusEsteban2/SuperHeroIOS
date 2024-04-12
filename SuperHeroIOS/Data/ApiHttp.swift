@@ -13,29 +13,33 @@ class ApiHttp {
     var response:SuperHeroResponse?=nil
     
     
-    func searchByName(query: String) async -> Array<SuperHero>{
+    func searchByName(query: String) async throws-> Array<SuperHero>{
         baseUrl=baseUrl + "search/\(query)"
-        response=try! await performAPICall()
+        response=try await performAPICall()
         return (response!.results)
     }
     
-    func searchByName(sid: String) async -> Array<SuperHero>{
+    func searchByName(sid: String) async throws-> Array<SuperHero>{
         baseUrl=baseUrl + "\(sid)"
-        response=try! await performAPICall()
+        response=try await performAPICall()
         return (response!.results)
     }
     
     private func performAPICall() async throws -> SuperHeroResponse {
         //Establecer URL
         let url = URL(string: baseUrl)!
-        //print ("Llamada a api")
+        print ("Llamada a api")
         let (data,_) = try await URLSession.shared.data(from: url)
-        
-        //print ("Procesado con Decoder")
+        print ("Datos recibidos: \(data.count)")
+        print ("Procesado con Decoder")
         let decoder=JSONDecoder()
-        response = try decoder.decode(type(of: response).self, from: data)
-        
-        //print ("Llamada correcta?: \(apiData.success)")
+        do {
+            response = try decoder.decode(SuperHeroResponse.self, from: data)
+        } catch {
+            print(error)
+        }
+        print ("Decoder Terminado")
+        print ("Llamada correcta?: \(response!.response)")
         //print ("Prueba de datos?: \(response!.results[0].name)")
         
         return (response!)
