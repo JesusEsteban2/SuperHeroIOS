@@ -8,11 +8,19 @@
 import UIKit
 
 class SecondViewController: UIViewController {
-
+    var superParam:SuperHero?=nil
+    var filaParam:Int=0
+    
+    @IBOutlet weak var imageSuper: UIImageView!
+    @IBOutlet weak var nomSuper: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        imageSuper.loadImage(fromURL: superParam!.image.url)
+        nomSuper.text=superParam?.name
+        
     }
     
 

@@ -18,12 +18,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="160" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="2tg-iE-3WY">
-                                <rect key="frame" x="16" y="135" width="361" height="683"/>
+                                <rect key="frame" x="16" y="152" width="361" height="666"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standarCell" rowHeight="160" translatesAutoresizingMaskIntoConstraints="NO" id="Ldq-u6-nYy" customClass="SuperTableViewCell" customModule="SuperHeroIOS" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="standarCell" rowHeight="160" id="Ldq-u6-nYy" customClass="SuperTableViewCell" customModule="SuperHeroIOS" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="361" height="160"/>
-                                        <autoresizingMask key="autoresizingMask"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ldq-u6-nYy" id="2pZ-v9-7kb">
                                             <rect key="frame" x="0.0" y="0.0" width="361" height="160"/>
                                             <autoresizingMask key="autoresizingMask"/>
@@ -35,7 +35,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyB-o6-W4z">
-                                                    <rect key="frame" x="177" y="11" width="188" height="21"/>
+                                                    <rect key="frame" x="177" y="10.999999999999998" width="188" height="20.333333333333329"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="188" id="vLz-Cg-kiY"/>
                                                     </constraints>
@@ -43,6 +43,35 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="2Fz-Km-Ht8">
+                                                    <rect key="frame" x="215" y="47" width="138" height="4"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="systemBlueColor"/>
+                                                </progressView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="figure.strengthtraining.traditional" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jyC-BC-hL7">
+                                                    <rect key="frame" x="177" y="31" width="36" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="REb-nQ-AvU">
+                                                    <rect key="frame" x="215" y="89" width="138" height="4"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                </progressView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="speedometer" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="jb8-rX-g1X">
+                                                    <rect key="frame" x="177" y="73" width="36" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="systemOrangeColor"/>
+                                                </imageView>
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Yes-1i-74k">
+                                                    <rect key="frame" x="215" y="130" width="138" height="4"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="systemRedColor"/>
+                                                </progressView>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="brain" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="u3y-Ah-K1j">
+                                                    <rect key="frame" x="177" y="114" width="36" height="36"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="tintColor" systemColor="systemPinkColor"/>
+                                                </imageView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="rXj-Q0-Qwn" firstAttribute="leading" secondItem="2pZ-v9-7kb" secondAttribute="leadingMargin" constant="-20" id="I31-EO-kjq"/>
@@ -53,15 +82,18 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="intelig" destination="Yes-1i-74k" id="oay-Sf-GBZ"/>
                                             <outlet property="nombre" destination="xyB-o6-W4z" id="iGf-7G-mwx"/>
+                                            <outlet property="power" destination="2Fz-Km-Ht8" id="48z-pO-dMc"/>
+                                            <outlet property="speed" destination="REb-nQ-AvU" id="mxT-H5-m0w"/>
                                             <outlet property="superImagen" destination="rXj-Q0-Qwn" id="Kaq-j0-BED"/>
-                                            <segue destination="BYZ-38-t0r" kind="show" id="jCt-3X-pg8"/>
+                                            <segue destination="BYZ-38-t0r" kind="show" destinationCreationSelector="toDetailView:" id="jCt-3X-pg8"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
                             <searchBar contentMode="redraw" id="41v-yQ-dSa">
-                                <rect key="frame" x="16" y="86" width="361" height="44"/>
+                                <rect key="frame" x="16" y="103" width="361" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
@@ -97,8 +129,15 @@
                                 <rect key="frame" x="16" y="109" width="361" height="210"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vB-8w-y8j">
-                                <rect key="frame" x="175" y="338" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4vB-8w-y8j">
+                                <rect key="frame" x="16" y="338" width="361" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IqJ-YG-p4g">
+                                <rect key="frame" x="16" y="373" width="361" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -109,10 +148,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="6hW-Bv-jFg"/>
+                    <connections>
+                        <outlet property="imageSuper" destination="nHn-hy-sJ5" id="PlA-Ah-ZG4"/>
+                        <outlet property="nomSuper" destination="4vB-8w-y8j" id="7pv-Lm-oZN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1057.2519083969464" y="-2.1126760563380285"/>
+            <point key="canvasLocation" x="1054.1984732824426" y="-2.1126760563380285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xSi-TY-nZc">
@@ -134,8 +177,23 @@
         </scene>
     </scenes>
     <resources>
+        <image name="brain" catalog="system" width="128" height="107"/>
+        <image name="figure.strengthtraining.traditional" catalog="system" width="128" height="119"/>
+        <image name="speedometer" catalog="system" width="128" height="123"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemOrangeColor">
+            <color red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.1764705882" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
